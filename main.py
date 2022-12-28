@@ -75,7 +75,7 @@ for i, fragmento in enumerate(fragmentos):
     # Generar imágenes a partir del fragmento de texto
     headers = CaseInsensitiveDict()
     headers["Content-Type"] = "application/json"
-    headers["Authorization"] = "Bearer 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"
+    headers["Authorization"] = "Bearer API OPENAI"
     data = json.dumps({"model": "image-alpha-001", "prompt": ' '.join(fragmento), "num_images":1, "size":"1024x1024"})
     resp = requests.post("https://api.openai.com/v1/images/generations", headers=headers, data=data)
     resp = requests.post("https://api.openai.com/v1/images/generations", headers=headers, data=data)
